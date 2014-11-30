@@ -79,8 +79,12 @@ configuration file to externally configure your dependencies, and have
 sbt use those external configuration files. You can learn more about
 that [here][external-maven-ivy].
 
+Actually, sbt will search mvn repository to satisified the dependencies by
+default,[mvn repositories](http://search.maven.org/), you can try by type
+keyword (Like mysql ) to search.
+
 Declaring a dependency looks like this, where `groupId`, `artifactId`, and
-`revision` are strings:
+`revision` [know more about groupId,artifactId,revision](http://maven.apache.org/guides/mini/guide-naming-conventions.html) are strings:
 
 ```scala
 libraryDependencies += groupID % artifactID % revision
